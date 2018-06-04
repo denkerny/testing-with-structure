@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="card col mr-3 ml-3 " style="width: 18rem;" *ngFor="let projectTask of project">
+      <div class="card-body">
+        <h5 class="card-title">{{ projectTask.name }}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+        <p class="card-text">{{ projectTask | json }}</p>
+        <a href="#" class="card-link">Card link</a>
+        <button class="btn btn-lg btn-outline-primary" (click)="open(projectTask)">Launch demo modal</button>
+      </div>
+  </div>
+</div>

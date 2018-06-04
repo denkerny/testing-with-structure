@@ -1,0 +1,20 @@
+<div class="modal-header">
+    <h4 class="modal-title">Hi there!</h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body" >
+      <div class="row">
+          <div class="card col mr-2 ml-2" style="width: 18rem;" *ngFor="let sub of project.subtasks; let i = index">
+              <div class="card-body">
+                <h5 class="card-title">{{ i }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">hours: {{ sub.hours }}</h6>
+                <h6 class="card-subtitle mb-2 text-muted">subname: {{ sub.name }}</h6>
+              </div>
+          </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+</div>

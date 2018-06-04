@@ -1,0 +1,15 @@
+<ngb-accordion #acc="ngbAccordion"  [activeIds]="activeIds">
+    <ngb-panel *ngFor="let project of projectList; let i = index;">
+        <ng-template ngbPanelTitle>
+          <a class="hidden" (click)="rotate(i)">
+            <i [@rotatedState]='selectedIndex === i && state' class="material-icons">
+                keyboard_arrow_up
+            </i>
+          </a>
+        </ng-template>
+        <ng-template ngbPanelContent>
+          {{ project.project }}
+          <app-project-task [project]="project.projectTasks"></app-project-task>
+        </ng-template>
+  </ngb-panel>
+</ngb-accordion>
